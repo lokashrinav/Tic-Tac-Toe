@@ -1,7 +1,8 @@
+let xl = 0;
+
 var Gameboard = (function() {
     let arr = ["", "", "", "", "", "", "", "", ""]
     let trace = 0;
-    let xl = 0;
     let small = document.getElementsByClassName("small")[0]
     let big = document.getElementsByClassName("big")[0]
     let popup = document.getElementsByClassName("popup")[0]
@@ -22,37 +23,37 @@ var Gameboard = (function() {
     return {
         win: function(){
             if((arr[0] == "O" && arr[1] == "O" && arr[2]== "O")||(arr[3] == "O" && arr[4] == "O" && arr[5] == "O")||(arr[6] == "O" && arr[7] == "O" && arr[8] == "O")) {
-                Gameboard.statement()
                 xl++;
+                Gameboard.statement()
             }
             else if((arr[0] == "X" && arr[1] == "X" && arr[2] == "X")||(arr[3] == "X" && arr[4] == "X" && arr[5] == "X")||(arr[6] == "X" && arr[7] == "X" && arr[8] == "X")) {
-                Gameboard.statement()
                 xl--;
+                Gameboard.statement()
             }
             else if((arr[0] == "O" && arr[3] == "O" && arr[6]== "O")||(arr[1] == "O" && arr[4] == "O" && arr[7] == "O")||(arr[2] == "O" && arr[5] == "O" && arr[8] == "O")) {
-                Gameboard.statement()
                 xl++;
+                Gameboard.statement()
             }
             else if((arr[0] == "X" && arr[3] == "X" && arr[6]== "X")||(arr[1] == "X" && arr[4] == "X" && arr[7] == "X")||(arr[2] == "X" && arr[5] == "X" && arr[8] == "X")) {
-                Gameboard.statement()
                 xl--;
+                Gameboard.statement()
             }
             else if((arr[2] == "O" && arr[4] == "O" && arr[6] == "O")||(arr[0] == "O" && arr[4] == "O" && arr[8] == "O")) {
-                Gameboard.statement()
                 xl++;
+                Gameboard.statement()
             }
             else if((arr[2] == "X" && arr[4] == "X" && arr[6] == "X")||(arr[0] == "X" && arr[4] == "X" && arr[8] == "X")) {
-                Gameboard.statement()
                 xl--;
+                Gameboard.statement()
             }
             
         },
         statement: function(r){
             if(xl>0){
-                words.innerHTML = "Congratulations, PlayerX!"
-            }
-            else{
                 words.innerHTML = "Congratulations, PlayerO!"
+            }
+            else if(xl<0){
+                words.innerHTML = "Congratulations, PlayerX!"
             }
             popup.classList.remove("popup")
             popup.classList.add("popup-open")
