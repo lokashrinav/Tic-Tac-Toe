@@ -10,17 +10,21 @@
     <div class="container">
         <div class="title">Tic-Tac-Toe!</div>
         <div class="center">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <div class="box4"></div>
-            <div class="box5"></div>
-            <div class="box6"></div>
-            <div class="box7"></div>
-            <div class="box8"></div>
-            <div class="box9"></div>
+            <div class="box1 box" onclick="Gameboard.choose(0)"></div>
+            <div class="box2 box" onclick="Gameboard.choose(1)"></div>
+            <div class="box3 box" onclick="Gameboard.choose(2)"></div>
+            <div class="box4 box" onclick="Gameboard.choose(3)"></div>
+            <div class="box5 box" onclick="Gameboard.choose(4)"></div>
+            <div class="box6 box" onclick="Gameboard.choose(5)"></div>
+            <div class="box7 box" onclick="Gameboard.choose(6)"></div>
+            <div class="box8 box" onclick="Gameboard.choose(7)"></div>
+            <div class="box9 box" onclick="Gameboard.choose(8)"></div>
         </div>
-        <div class="screen"><div class="big">○</div> Goes First</div>
+        <div class="screen">
+            <div class="big">O</div>
+            <div class = "small">Goes First</div>
+        </div>
+        <div class="popup"><div class="words">Congrulations, Player 1!</div><div>You Won!</div></div> 
     </div>
 <body>
     <script src="scripter.js">

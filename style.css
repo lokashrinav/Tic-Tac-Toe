@@ -6,7 +6,8 @@ body, html{
 .container{
     width: 100%;
     height: 100vh;
-    background-color: blue;
+    background: #000;
+    opacity: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +23,17 @@ body, html{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+}
+
+.parentDisable{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
 }
 
 .title{
@@ -40,65 +52,122 @@ body, html{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    border: 1px solid rgb(74, 255, 74);
+    border: 3px solid rgb(74, 255, 74);
     padding: 20px;
     padding-top: 0px;
+    min-width: 131px;;
+}
+
+.popup{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid yellow;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.popup-open{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid yellow;
+    flex-direction: column;
+}
+
+.words{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .big{
     font-size: 100px;
 }
 
+.box{
+    max-height: 148px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 80px;
+}
+
 .box1{
     grid-column: 1/2;
     grid-row: 1/2;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box2{
     grid-column: 2/3;
     grid-row: 1/2;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box3{
     grid-column: 3/4;
     grid-row: 1/2;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box4{
     grid-column: 1/2;
     grid-row: 2/3;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box5{
     grid-column: 2/3;
     grid-row: 2/3;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box6{
     grid-column: 3/4;
     grid-row: 2/3;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box7{
     grid-column: 1/2;
     grid-row: 3/4;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box8{
     grid-column: 2/3;
     grid-row: 3/4;
     border: 1px solid blue;
+    color: blue;
 }
 
 .box9{
     grid-column: 3/4;
     grid-row: 3/4;
     border: 1px solid blue;
+    color: blue;
 }
