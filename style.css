@@ -93,6 +93,9 @@ body, html{
     border: 2px solid yellow;
     flex-direction: column;
     top:25%;
+    box-shadow: rgb(17, 0, 255) 0px 12px 28px 0px,
+    rgb(17, 0, 255) 0px 2px 4px 0px,
+    rgb(17, 0, 255) 0px 0px 0px 1px inset;
 }
 
 .popup1{
@@ -131,6 +134,9 @@ body, html{
     border: 2px solid yellow;
     flex-direction: column;
     top:25%;
+    box-shadow: rgb(17, 0, 255) 0px 12px 28px 0px,
+    rgb(17, 0, 255) 0px 2px 4px 0px,
+    rgb(17, 0, 255) 0px 0px 0px 1px inset;
 }
 
 .popup2{
@@ -169,6 +175,9 @@ body, html{
     border: 2px solid yellow;
     flex-direction: column;
     top:25%;
+    box-shadow: rgb(17, 0, 255) 0px 12px 28px 0px,
+    rgb(17, 0, 255) 0px 2px 4px 0px,
+    rgb(17, 0, 255) 0px 0px 0px 1px inset;
 }
 
 .words{
