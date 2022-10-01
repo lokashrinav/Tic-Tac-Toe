@@ -16,8 +16,7 @@ body, html{
 }
 
 .center{
-    min-width: 400px;
-    width: clamp(400px, 450px, 450px);
+    width: clamp(300px, 450px, 450px);
     height: 450px;
     background-color: rgb(74, 255, 74);
     margin-left: 10px;
