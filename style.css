@@ -92,6 +92,83 @@ body, html{
     text-align: center;
     border: 2px solid yellow;
     flex-direction: column;
+    top:25%;
+}
+
+.popup1{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 4px solid yellow;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.popup-open1{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 250px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid yellow;
+    flex-direction: column;
+    top:25%;
+}
+
+.popup2{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 4px solid yellow;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.popup-open2{
+    max-width: c;
+    position: fixed;
+    background-color:blue;
+    color: greenyellow;
+    border-radius: 90px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 250px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid yellow;
+    flex-direction: column;
+    top:25%;
 }
 
 .words{
