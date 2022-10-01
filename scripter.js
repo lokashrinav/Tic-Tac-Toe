@@ -7,16 +7,9 @@ var Gameboard = (function() {
     let big = document.getElementsByClassName("big")[0]
     let popup = document.getElementsByClassName("popup")[0]
     let words = document.getElementsByClassName("words")[0]
-    let container = document.getElementsByClassName("container")[0]
-    let box1 = document.getElementsByClassName("box1")[0]
-    let box2 = document.getElementsByClassName("box2")[0]
-    let box3 = document.getElementsByClassName("box3")[0]
-    let box4 = document.getElementsByClassName("box4")[0]
-    let box5 = document.getElementsByClassName("box5")[0]
-    let box6 = document.getElementsByClassName("box6")[0]
-    let box7 = document.getElementsByClassName("box7")[0]
-    let box8 = document.getElementsByClassName("box8")[0]
-    let box9 = document.getElementsByClassName("box9")[0]
+    let won = document.getElementsByClassName("won")[0]
+    let reseter = document.getElementsByClassName("reset")[0]
+    let box = document.getElementsByClassName('box')[0]
 
 
 
@@ -56,39 +49,59 @@ var Gameboard = (function() {
                 popup.classList.remove("popup")
                 popup.classList.add("popup-open")
                 words.innerHTML = "It's a Tie!"
+                won.innerHTML = "";
             }
         },
         statement: function(r){
             if(xl>0){
-                words.innerHTML = "Congratulations, PlayerO!"
+                words.innerHTML = "Congratulations, Player O!"
             }
             else if(xl<0){
-                words.innerHTML = "Congratulations, PlayerX!"
+                words.innerHTML = "Congratulations, Player X!"
             }
             popup.classList.remove("popup")
             popup.classList.add("popup-open")
             xl = 0;
-            box1.setAttribute("onclick", "")
-            box2.setAttribute("onclick", "")
-            box3.setAttribute("onclick", "")
-            box4.setAttribute("onclick", "")
-            box5.setAttribute("onclick", "")
-            box6.setAttribute("onclick", "")
-            box7.setAttribute("onclick", "")
-            box8.setAttribute("onclick", "")
-            box9.setAttribute("onclick", "")
-
+            for(let i = 0; i < arr.length; i++) {
+                let box = document.getElementsByClassName('box')[i]
+                box.setAttribute("onclick", "");
+            }
+            reseter.setAttribute("onclick", "")
+            big.innerHTML = "Game";
+            small.innerHTML = "Over!";            
         },
         insert: function() {
             for(let i = 0; i < arr.length; i++) {
-                let box = document.getElementsByClassName('box')[i]
+                box = document.getElementsByClassName('box')[i]
                 box.innerHTML = arr[i];
             }
             Gameboard.win()        
         },
         reset: function(){
-            arr = [];
+            arr = ["", "", "", "", "", "", "", "", ""]
+            for(let i = 0; i < arr.length; i++) {
+                box = document.getElementsByClassName('box')[i]
+                box.setAttribute("onclick", `Gameboard.choose(${i})`);
+            }
+            reseter.setAttribute("onclick", "Gameboard.reset()")
+            big.innerHTML = "O";
+            small.innerHTML = "Goes First";
             Gameboard.insert()
+            trace = 0;
+        },
+        reset2: function(){
+            popup.classList.remove("popup-open")
+            popup.classList.add("popup")
+            arr = ["", "", "", "", "", "", "", "", ""]
+            for(let i = 0; i < arr.length; i++) {
+                box = document.getElementsByClassName('box')[i]
+                box.setAttribute("onclick", `Gameboard.choose(${i})`);
+            }
+            reseter.setAttribute("onclick", "Gameboard.reset()")
+            big.innerHTML = "O";
+            small.innerHTML = "Goes First";
+            Gameboard.insert()
+            trace = 0;
         },
         addX: function(t){
             if(arr[t] != "O" && arr[t] != "X") {
@@ -105,18 +118,19 @@ var Gameboard = (function() {
         choose: function(t){
             if(trace==1) {
                 if(arr[t] != "O" && arr[t] != "X") {
-                Gameboard.addX(t);
-                trace=0;
                 big.innerHTML = "O's";
-                small.innerHTML = "Turn"}
-            
+                small.innerHTML = "Turn"
+                Gameboard.addX(t);
+                trace=0;      
+            }      
             }
             else{
                 if(arr[t] != "O" && arr[t] != "X") {
+                big.innerHTML = "X's";
+                small.innerHTML = "Turn";
                 Gameboard.addO(t);
                 trace++;
-                big.innerHTML = "X's";
-                small.innerHTML = "Turn";}
+            }
             }
         }
 
@@ -125,15 +139,4 @@ var Gameboard = (function() {
 }
 )();
 
-const Player = (name) => {
-    return {};
-}
-
-Gameboard.insert();
-
-
-document.getElementsByClassName('box')[0]
-        .addEventListener('click', function (event) {
-            Gameboard.addO(0)
-        })
 

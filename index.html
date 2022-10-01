@@ -20,11 +20,12 @@
             <div class="box8 box" onclick="Gameboard.choose(7)"></div>
             <div class="box9 box" onclick="Gameboard.choose(8)"></div>
         </div>
+        <div class="reset" onclick = "Gameboard.reset()"><div class="word">Reset</div></div>
         <div class="screen">
             <div class="big">O</div>
             <div class = "small">Goes First</div>
         </div>
-        <div class="popup"><div class="words">Congratulations, Player 1!</div><div>You Won!</div></div> 
+        <div class="popup"><div class="words">Congratulations, Player 1!</div><div class="won">You Won!</div><div class="restart" onclick = "Gameboard.reset2()">Restart</div></div> 
     </div>
 <body>
     <script src="scripter.js">
