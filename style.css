@@ -186,7 +186,14 @@ body, html{
 }
 
 .big{
-    font-size: 100px;
+    font-size: calc(10px + 4vw);
+    word-break: break-all;
+    text-align: center;
+}
+
+.words{
+    font-size: calc(20px + 1vw);
+    word-break: break-all;
 }
 
 .box{

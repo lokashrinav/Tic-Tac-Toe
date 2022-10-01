@@ -16,7 +16,6 @@ var Gameboard = (function() {
     let inpit = document.getElementsByClassName("inpit")[0]
     let inpiter = document.getElementsByClassName("inpit")[1]
 
-
     return {
         siv: function(){
             if(inpit.value != undefined) {
