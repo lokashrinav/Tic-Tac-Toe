@@ -95,8 +95,11 @@ body, html{
 .box{
     max-height: 148px;
     text-align: center;
-    line-height: 150px;
-    font-size: 80px;
+    vertical-align:center;
+    line-height: calc(70px + 4vw);
+    font-size: calc(30px + 5vw);
+    display: flex;
+    justify-content: center;
 }
 
 .box1{
