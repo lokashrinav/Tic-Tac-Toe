@@ -46,7 +46,7 @@ body, html{
 .screen{
     color: rgb(74, 255, 74);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size:calc(20px + 1.5vw);
     display: flex;
     flex-direction: column;
     justify-content: center;
