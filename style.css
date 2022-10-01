@@ -16,24 +16,14 @@ body, html{
 }
 
 .center{
-    width: clamp(300px, 450px, 450px);
-    height: 450px;
+    width: calc(250px + 10vw);
+    height: calc(250px + 10vw);
     background-color: rgb(74, 255, 74);
     margin-left: 10px;
     margin-right: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-}
-
-.parentDisable{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: gray;
-    z-index: 998;
-    height: 100%;
-    width: 100%;
 }
 
 .title{
